@@ -32,8 +32,9 @@ public class User implements UserDetails {
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
-    public User(String login, String password, UserRole role){
+    public User(String login, String email, String password, UserRole role){
         this.login = login;
+        this.email = email;
         this.password = password;
         this.role = role;
     }
