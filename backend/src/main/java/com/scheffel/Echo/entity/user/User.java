@@ -24,16 +24,21 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
-    private String login;
+    @Column(name = "full_name")
+    private String fullName;
+
+    private String username;
     private String email;
     private String password;
+
+    @Enumerated(EnumType.STRING)
     private UserRole role;
 
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
-    public User(String login, String email, String password, UserRole role){
-        this.login = login;
+    public User(String fullName, String email, String password, UserRole role){
+        this.fullName = fullName;
         this.email = email;
         this.password = password;
         this.role = role;
@@ -47,6 +52,6 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return login;
+        return username;
     }
 }

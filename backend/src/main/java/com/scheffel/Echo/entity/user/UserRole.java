@@ -1,9 +1,5 @@
 package com.scheffel.Echo.entity.user;
 
-import jakarta.persistence.Entity;
-import lombok.Getter;
-import lombok.Setter;
-
 public enum UserRole {
     ADMIN("admin"),
     USER("user");
