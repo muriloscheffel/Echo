@@ -37,11 +37,13 @@ public class User implements UserDetails {
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 
-    public User(String fullName, String email, String password, UserRole role){
-        this.fullName = fullName;
+    public User(LocalDateTime createdAt, String email, String fullName, String password, UserRole role, String username){
+        this.createdAt = createdAt;
         this.email = email;
+        this.fullName = fullName;
         this.password = password;
         this.role = role;
+        this.username = username;
     }
 
     @Override
