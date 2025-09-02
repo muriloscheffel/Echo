@@ -1,4 +1,4 @@
-package com.scheffel.Echo.entity.user;
+package com.scheffel.Echo.domain.user;
 
 public enum UserRole {
     ADMIN("admin"),

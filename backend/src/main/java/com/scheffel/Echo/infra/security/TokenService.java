@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.auth0.jwt.algorithms.Algorithm;
-import com.scheffel.Echo.entity.user.User;
+import com.scheffel.Echo.domain.user.User;
 
 import java.time.Instant;
 import java.time.LocalDateTime;

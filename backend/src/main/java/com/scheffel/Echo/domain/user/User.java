@@ -1,10 +1,7 @@
-package com.scheffel.Echo.entity.user;
+package com.scheffel.Echo.domain.user;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -27,7 +24,9 @@ public class User implements UserDetails {
     @Column(name = "full_name")
     private String fullName;
 
+    @Setter
     private String username;
+
     private String email;
     private String password;
 
@@ -56,4 +55,5 @@ public class User implements UserDetails {
     public String getUsername() {
         return username;
     }
+
 }

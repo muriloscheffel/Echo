@@ -1,6 +1,6 @@
 package com.scheffel.Echo.repository;
 
-import com.scheffel.Echo.entity.user.User;
+import com.scheffel.Echo.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 
